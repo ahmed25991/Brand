@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContainer"
+        android:background="@drawable/custom_bg_product_container"
+        android:layout_marginVertical="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_product"
+            android:layout_width="132dp"
+            android:layout_height="115dp"
+            android:src="@drawable/img_error"
+            android:scaleType="fitXY"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_like_unlike"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_heart"
+            android:scaleType="centerInside"
+            android:scaleX="-1"
+            android:background="@color/black"
+            app:shapeAppearanceOverlay="@style/CircularShape"
+            app:layout_constraintTop_toTopOf="@+id/iv_product"
+            app:layout_constraintStart_toStartOf="@+id/iv_product" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="product number 1"
+            android:gravity="start"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="13sp"
+            android:fontFamily="@font/jana_font"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="11sp"
+            android:translationY="-5.6sp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_product"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iv_product"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCategoryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="makeup"
+            android:gravity="start"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="13sp"
+            android:fontFamily="@font/jana_font"
+            android:textColor="@color/greyLevel7"
+            android:layout_marginHorizontal="12dp"
+            android:lineSpacingExtra="11sp"
+            android:translationY="-5.6sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_product"
+            app:layout_constraintTop_toBottomOf="@+id/tvProductName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOldPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="10 S.R"
+            android:gravity="start"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="13sp"
+            android:fontFamily="@font/jana_font"
+            android:textColor="@color/dark_grey_2"
+            android:layout_marginHorizontal="12dp"
+            android:lineSpacingExtra="11sp"
+            android:translationY="-5.6sp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_cart"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategoryName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="20 S.R"
+            android:gravity="start"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/jana_font"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="12dp"
+            android:lineSpacingExtra="11sp"
+            android:translationY="-5.6sp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_cart"
+            app:layout_constraintTop_toBottomOf="@+id/tvOldPrice"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_cart"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="8dp"
+            android:background="@color/pink"
+            android:src="@drawable/ic_cart"
+            android:scaleType="centerInside"
+            android:scaleX="-1"
+            android:tint="@color/white"
+            app:shapeAppearanceOverlay="@style/CircularShape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

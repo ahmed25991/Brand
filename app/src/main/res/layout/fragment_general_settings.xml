@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ibrand.ui.auth.AuthViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:fitsSystemWindows="true"
+        android:fillViewport="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="24dp"
+                android:text="@string/general_settings"
+                android:textSize="18sp"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-8sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_choose_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_lang"
+                android:textColor="@color/black_level_1"
+                android:textSize="18sp"
+                android:lineSpacingExtra="-12sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:textStyle="bold"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_english"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="8dp"
+                android:paddingVertical="8dp"
+                android:text="@string/english"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:lineSpacingExtra="-7sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:background="@drawable/custom_bg_btns_pink_solid_corners"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_arabic"
+                app:layout_constraintTop_toBottomOf="@+id/tv_choose_lang" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_arabic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/arabic"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="8dp"
+                android:paddingVertical="8dp"
+                android:textColor="@color/txt_dark_grey"
+                android:textSize="16sp"
+                android:lineSpacingExtra="-7sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:background="@drawable/custom_bg_btns_white_corners_dark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_english"
+                app:layout_constraintTop_toBottomOf="@+id/tv_choose_lang" />
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_choose_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_lang"
+                android:textColor="@color/black_level_1"
+                android:textSize="18sp"
+                android:lineSpacingExtra="-12sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:textStyle="bold"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_arabic" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_male"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="8dp"
+                android:paddingVertical="8dp"
+                android:text="@string/male"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:lineSpacingExtra="-7sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:background="@drawable/custom_bg_btns_pink_solid_corners"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_female"
+                app:layout_constraintTop_toBottomOf="@+id/tv_choose_gender" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_female"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="8dp"
+                android:paddingVertical="8dp"
+                android:textColor="@color/txt_dark_grey"
+                android:textSize="16sp"
+                android:lineSpacingExtra="-7sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:background="@drawable/custom_bg_btns_white_corners_dark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_male"
+                app:layout_constraintTop_toBottomOf="@+id/tv_choose_gender" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_choose_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_country"
+                android:textColor="@color/black_level_1"
+                android:textSize="18sp"
+                android:lineSpacingExtra="-12sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:textStyle="bold"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_female" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_view_countries"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_choose_country"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_m_country" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_shopping_now"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/shopping_now"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.02"
+                android:textAllCaps="false"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/custom_bg_btns_green_solid_corners"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rec_view_countries"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

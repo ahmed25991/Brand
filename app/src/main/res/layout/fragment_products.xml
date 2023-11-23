@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ibrand.ui.home.HomeViewModel" />
+    </data>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clcontainer"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:padding="24dp"
+            android:scaleX="-1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:fontFamily="@font/jana_font"
+            android:text="@string/products"
+            android:textColor="@color/darkgreen"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:fontFamily="@font/jana_font"
+            android:id="@+id/et_search"
+            android:hint="@string/search"
+            android:inputType="text"
+            android:imeOptions="actionNone"
+            android:drawablePadding="8dp"
+            android:paddingVertical="8dp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableTint="@color/greyLevel3"
+            android:textColorHint="@color/greyLevel3"
+            android:animateLayoutChanges="true"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:paddingHorizontal="8dp"
+            android:background="@drawable/custom_bg_search_white"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_page_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recViewCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="24dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_search"
+            tools:itemCount="8"
+            tools:listitem="@layout/item_cat_of_product" />
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recViewProducts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recViewCategories"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_product" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="2dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/custom_bg_btns_white_corners_dark"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:paddingHorizontal="8dp"
+        android:layout_weight="1"
+        android:textColor="@color/txt_dark_grey"
+        android:textSize="16sp"
+        android:lineSpacingExtra="-7sp"
+        android:fontFamily="@font/jana_font"
+        android:letterSpacing="0.01"
+        android:text="France" />
+
+</LinearLayout>
+</layout>

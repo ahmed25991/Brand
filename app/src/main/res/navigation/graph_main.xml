@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_main"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.ibrand.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/home_to_products"
+            app:destination="@id/productsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCategories"
+        android:name="com.ibrand.ui.categories.MainCategoriesFragment"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/categories_to_products"
+            app:destination="@id/productsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentMyAccount"
+        android:name="com.ibrand.ui.account.AccountFragment"
+        tools:layout="@layout/fragment_account">
+
+
+        <action
+            android:id="@+id/account_to_edit_profile"
+            app:destination="@id/fragmentCompleteProfile" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCompleteProfile"
+        android:name="com.ibrand.ui.account.userCompleteProfile.UserCompleteProfileFragment"
+        tools:layout="@layout/fragment_user_complete_profile">
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.ibrand.ui.products.ProductsFragment"
+        tools:layout="@layout/fragment_products">
+
+
+    </fragment>
+
+
+</navigation>

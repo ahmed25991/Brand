@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.ibrand.ui.account.AccountViewModel" />
+    </data>
+    <androidx.core.widget.NestedScrollView
+        android:fitsSystemWindows="true"
+        android:fillViewport="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_account"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="-8sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/user_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_image"
+                android:layout_marginTop="56dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guest"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-9sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_image"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="user@mail.com"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnEditAccount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_account"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-7sp"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawableStart="@drawable/ic_edit_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_email" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnMyOrders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/my_orders"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-7sp"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawableStart="@drawable/ic_orders"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEditAccount" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnFavourite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/favourite"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-7sp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawableStart="@drawable/ic_favourite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMyOrders" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnMyAddresses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/my_addresses"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-7sp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawableStart="@drawable/ic_addresses"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnFavourite" />
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-7sp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawableStart="@drawable/ic_settings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMyAddresses" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnSupport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/support"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-7sp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawableStart="@drawable/ic_support"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSettings" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnLogOut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/logOut"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-7sp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawableStart="@drawable/ic_log_out"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSupport" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

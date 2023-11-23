@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "690412649585",
+    "project_id": "ibrand-ba7b4",
+    "storage_bucket": "ibrand-ba7b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690412649585:android:88beefb9afd9e8570bafd0",
+        "android_client_info": {
+          "package_name": "com.ibrand"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUsXGluhN-AgGCXvwWcE4Cn7k5QUEoEoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

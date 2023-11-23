@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- margins -->
+
+    <dimen name="margin_zero">0dp</dimen>
+    <dimen name="margin_xx_small">2dp</dimen>
+    <dimen name="margin_x_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_xxx_medium">12dp</dimen>
+    <dimen name="margin_xx_medium">14dp</dimen>
+    <dimen name="margin_x_medium">16dp</dimen>
+    <dimen name="margin_medium">20dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_x_large">64dp</dimen>
+    <dimen name="margin_xx_large">128dp</dimen>
+
+    <!-- common font sizes. not directly used by the app -->
+
+    <dimen name="sp_xx_small">8sp</dimen>
+    <dimen name="sp_x_small">10sp</dimen>
+    <dimen name="sp_small">12sp</dimen>
+    <dimen name="sp_medium">14sp</dimen>
+    <dimen name="sp_x_medium">16sp</dimen>
+    <dimen name="sp_large">18sp</dimen>
+    <dimen name="sp_x_large">22sp</dimen>
+    <dimen name="sp_xx_large">26sp</dimen>
+    <dimen name="sp_xxx_large">32sp</dimen>
+
+    <!-- Theme dimensions -->
+
+    <dimen name="corner_radius_card">8dp</dimen>
+    <dimen name="corner_radius_bottom_sheet_dialog">16dp</dimen>
+    <dimen name="elevation_card">16dp</dimen>
+
+    <!-- margin between a container and its contents -->
+    <dimen name="margin_container">@dimen/margin_medium</dimen>
+
+    <!-- margin between consecutive form elements -->
+    <dimen name="margin_form">@dimen/margin_x_medium</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+</resources>

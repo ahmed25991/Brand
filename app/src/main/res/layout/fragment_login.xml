@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ibrand.ui.auth.AuthViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:fitsSystemWindows="true"
+        android:fillViewport="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/splash_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/auth_bg_top"
+                android:scaleType="fitXY"
+                android:scaleX="-1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/splash_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/auth_bg_bottom"
+                android:scaleType="fitXY"
+                android:scaleX="-1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/splash_center"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:src="@drawable/splash_center"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_skip"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+
+                android:text="@string/skip"
+                android:textSize="18sp"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-8sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="24dp"
+                android:layout_marginEnd="140dp"
+                android:text="@string/login"
+                android:textSize="18sp"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-8sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                app:layout_constraintStart_toEndOf="@+id/btn_skip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_skip"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_skip"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_login"
+
+
+                android:textColor="@color/black_level_1"
+                android:textSize="24sp"
+                android:lineSpacingExtra="-9sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:textStyle="bold"
+
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/splash_center"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_sub_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/welcome_login_desc"
+                android:textColor="@color/light_green"
+                android:textSize="18sp"
+                android:lineSpacingExtra="-9sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+
+                android:paddingHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_input_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:background="@drawable/custom_bg_et"
+                app:boxBackgroundMode="none"
+                android:hint="+962"
+                android:focusable="false"
+                android:clickable="true"
+                android:textSize="@dimen/sp_medium"
+                android:textColor="@color/light_green"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:maxLength="5"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sub_description"/>
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_input_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/custom_bg_et"
+                app:boxBackgroundMode="none"
+                android:hint="@string/phone_number"
+                android:textColor="@color/light_green"
+                android:textSize="14sp"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:maxLength="60"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_input_country"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sub_description"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_start_app"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.02"
+                android:textAllCaps="false"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:background="@drawable/custom_bg_btns_green_solid_corners"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_input_phone"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

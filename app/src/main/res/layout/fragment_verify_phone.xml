@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ibrand.ui.auth.AuthViewModel" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:fitsSystemWindows="true"
+        android:fillViewport="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/splash_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/auth_bg_top"
+                android:scaleType="fitXY"
+                android:scaleX="-1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/splash_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/auth_bg_bottom"
+                android:scaleType="fitXY"
+                android:scaleX="-1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/splash_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/verify_center"
+                android:layout_marginTop="48dp"
+                android:scaleX="-1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_back"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:padding="24dp"
+                android:scaleX="-1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmation"
+                android:textSize="18sp"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-8sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:paddingHorizontal="24dp"
+                android:layout_marginEnd="140dp"
+                app:layout_constraintStart_toEndOf="@+id/btn_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_back"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+                />
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCodeSentToEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/confirmation_body"
+
+                android:textColor="@color/color_page_title"
+                android:textSize="18sp"
+                android:lineSpacingExtra="-8sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:textStyle="bold"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/splash_center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+            <com.chaos.view.PinView
+                android:id="@+id/otp_view"
+                style="@style/PinWidget.PinView"
+                android:layout_gravity="center_horizontal"
+                android:cursorVisible="false"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:textStyle="bold"
+                app:hideLineWhenFilled="true"
+                app:itemCount="6"
+                app:itemHeight="56dp"
+                app:itemRadius="8dp"
+                app:itemSpacing="10dp"
+                app:itemWidth="48dp"
+                app:lineWidth="1dp"
+                app:lineColor="@color/greylevel2"
+                app:viewType="rectangle"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:textSize="22sp"
+                android:textColor="@color/color_page_title"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/jana_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvCodeSentToEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/otp_view"
+                app:layout_constraintStart_toStartOf="@+id/otp_view"
+                app:layout_constraintEnd_toEndOf="@+id/otp_view">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btn_resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resend_code"
+                    android:textColor="@color/pink"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="-8sp"
+                    android:fontFamily="@font/jana_font"
+                    android:letterSpacing="0.01"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_didnot_receive_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verification_time"
+                    android:textColor="@color/color_page_title"
+                    android:textSize="18sp"
+                    android:layout_marginStart="8dp"
+                    android:lineSpacingExtra="-8sp"
+                    android:fontFamily="@font/jana_font"
+                    android:letterSpacing="0.01" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

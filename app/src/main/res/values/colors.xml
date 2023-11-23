@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="color_white_level_1">#f3f3f9</color>
+    <color name="darkgreen">#004e75</color>
+    <color name="darkgrey">#414141</color>
+    <color name="greylevel1">#dddddd</color>
+    <color name="greylevel2">#a0a0a0</color>
+    <color name="red">#DB151F</color>
+    <color name="redlevel1">#f4281f</color>
+    <color name="colorgreyLevel3">#2d3447</color>
+    <color name="colorShimmer">#C0C0C0</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent2">#80000000</color>
+    <color name="redLevel2">#ed1c24</color>
+    <color name="greenLevel2">#094e75</color>
+    <color name="greenLevel3">#d4edda</color>
+    <color name="greyLevel3">#b6b6b6</color>
+    <color name="greyLevel4">#e2e2eb</color>
+    <color name="greyLevel5">#f3f3f9</color>
+    <color name="greyLevel6">#a0a0a0</color>
+    <color name="greyLevel7">#666666</color>
+    <color name="greyLevel8">#b3414141</color>
+    <color name="greyLevel9">#eeeeee</color>
+    <color name="greyLevel10">#777778</color>
+    <color name="yellow_level1">#fae39d</color>
+    <color name="yellow_level2">#856404</color>
+    <color name="blue_level1">#1b82c5</color>
+    <color name="blue_level2">#004c73</color>
+    <color name="otp_color_filled">#f4f6fa</color>
+
+
+    // iibrand
+
+    <color name="txt_dark_grey">#48455A</color>
+    <color name="pink">#ED69A0</color>
+    <color name="light_green">#607D8A</color>
+    <color name="color_green">#19B9B8</color>
+    <color name="color_page_title">#212121</color>
+    <color name="black_level_1">#0D0D0D</color>
+    <color name="dark_grey">#757575</color>
+    <color name="dark_grey_2">#BDBDBD</color>
+
+
+
+
+
+</resources>

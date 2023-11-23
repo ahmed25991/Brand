@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_auth"
+    app:startDestination="@id/fragmentSplash">
+
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="com.ibrand.ui.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/splash_to_general_settings_fragment"
+            app:destination="@id/generalSettingsFragment" />
+
+        <action
+            android:id="@+id/splash_to_login_fragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/generalSettingsFragment"
+        android:name="com.ibrand.ui.generalSettings.GeneralSettingsFragment"
+        tools:layout="@layout/fragment_general_settings">
+        <action
+            android:id="@+id/general_settings_to_walk_through"
+            app:destination="@id/walkThroughFragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/walkThroughFragment"
+        android:name="com.ibrand.ui.walkThrough.WalkThroughFragment"
+        tools:layout="@layout/fragment_walk_through">
+        <action
+            android:id="@+id/walkthrough_to_login_fragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ibrand.ui.auth.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/login_to_verifyPhone"
+            app:destination="@id/verifyPhoneFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/verifyPhoneFragment"
+        android:name="com.ibrand.ui.auth.verifyPhone.VerifyPhoneFragment"
+        tools:layout="@layout/fragment_verify_phone">
+
+
+    </fragment>
+
+</navigation>

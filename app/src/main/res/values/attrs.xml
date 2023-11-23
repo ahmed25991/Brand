@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <attr name="colorShimmer" format="reference" />
+
+    <attr name="title" format="string" />
+
+    <declare-styleable name="TitleWithValueView">
+        <attr name="title" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleFont" format="reference" />
+
+        <attr name="value" format="string" />
+        <attr name="valueColor" format="color" />
+        <attr name="valueSize" format="dimension" />
+        <attr name="valueFont" format="reference" />
+
+        <attr name="dividerPadding" format="dimension" />
+        <attr name="isShowDivider" format="boolean" />
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+
+        <attr name="title" />
+
+        <attr name="helper" format="string" />
+
+        <attr name="prefix" format="string" />
+
+        <attr name="suffixText" format="string" />
+
+        <attr name="hint" format="string" />
+
+        <attr name="android:inputType" />
+
+        <attr name="android:text" />
+
+        <attr name="isPassword" format="boolean" />
+
+        <attr name="isRequired" format="boolean" />
+
+        <attr name="enabled" format="boolean" />
+
+        <attr name="isPhoneNumber" format="boolean" />
+
+        <!-- Whether the text input area should be drawn as a filled box, an outline box, or not as a box.-->
+        <attr name="boxBackgroundMod">
+            <!-- Specifies that there should be no box set on the text input area. -->
+            <enum name="none" value="0" />
+            <!-- Filled box mode for the text input box. -->
+            <enum name="filled" value="1" />
+            <!-- Outline box mode for the text input box. -->
+            <enum name="outline" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="ButtonEnd">
+
+        <attr name="buttonPadding" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="OtpEditText">
+
+        <attr name="length" format="integer" />
+
+        <attr name="android:inputType" />
+
+    </declare-styleable>
+
+</resources>

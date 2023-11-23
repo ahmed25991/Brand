@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ibrand.ui.auth.AuthViewModel" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:fitsSystemWindows="true"
+        android:fillViewport="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/user_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_image"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_back"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/edit_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/edit_image"
+                app:layout_constraintStart_toStartOf="@+id/user_image"
+                app:layout_constraintBottom_toBottomOf="@+id/user_image"
+                />
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:padding="24dp"
+                android:scaleX="-1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/complete_profile"
+                android:textSize="18sp"
+                android:textColor="@color/color_page_title"
+                android:lineSpacingExtra="-8sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_back"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+                />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_input_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/custom_bg_et"
+                app:boxBackgroundMode="none"
+                android:hint="@string/name"
+                android:textColor="@color/light_green"
+                android:textSize="14sp"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:inputType="textPersonName"
+                android:maxLength="60"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_image"/>
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_input_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/custom_bg_et"
+                app:boxBackgroundMode="none"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email"
+                android:textColor="@color/light_green"
+                android:textSize="14sp"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:maxLength="60"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_input_user_name"/>
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_input_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:background="@drawable/custom_bg_search_white"
+                app:boxBackgroundMode="none"
+                android:hint="+962"
+                android:focusable="false"
+                android:clickable="false"
+                android:textSize="@dimen/sp_medium"
+                android:textColor="@color/light_green"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:maxLength="5"
+                android:padding="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_input_email"/>
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_input_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/custom_bg_search_white"
+                app:boxBackgroundMode="none"
+                android:hint="@string/phone_number"
+                android:textColor="@color/light_green"
+                android:textSize="14sp"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.01"
+                android:maxLength="60"
+                android:padding="16dp"
+                android:focusable="false"
+                android:clickable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_input_country"
+                app:layout_constraintTop_toBottomOf="@+id/txt_input_email"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_change_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/change_password"
+                android:textColor="@color/pink"
+                android:textSize="13sp"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.02"
+                android:textAllCaps="false"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:background="@drawable/custom_bg_change_password"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_input_phone"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:lineSpacingExtra="-6sp"
+                android:fontFamily="@font/jana_font"
+                android:letterSpacing="0.02"
+                android:textAllCaps="false"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:background="@drawable/custom_bg_btns_pink_solid_corners"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintTop_toBottomOf="@+id/btn_change_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>
