@@ -5,7 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clContainer"
         android:background="@drawable/custom_bg_category_image"
-        android:paddingVertical="12dp"
+        android:paddingVertical="14dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

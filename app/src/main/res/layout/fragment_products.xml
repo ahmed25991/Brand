@@ -91,25 +91,20 @@
             tools:itemCount="8"
             tools:listitem="@layout/item_cat_of_product" />
 
-
-
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recViewProducts"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="12dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
-            android:paddingHorizontal="24dp"
+            android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recViewCategories"
             tools:itemCount="4"
             tools:listitem="@layout/item_product" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
 </layout>

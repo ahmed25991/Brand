@@ -32,6 +32,7 @@ class ProductAdapter (itemClickListener: ItemClickListener) : BaseRecAdapter<Pro
                 Glide.with(context).load(item.images?.get(0)?.original).into(ivProduct)
             }
             tvProductName.text = item.title
+            tvCategoryName.text = item.product_class
             tvOldPrice.text = (item.price?.exclTax?: 0.0).toString() + item.price?.currency
             tvNewPrice.text = (item.price?.inclTax?: 0.0).toString() + item.price?.currency
         }
